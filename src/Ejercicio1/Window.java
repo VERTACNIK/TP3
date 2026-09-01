@@ -4,12 +4,14 @@
  */
 package Ejercicio1;
 
+import javax.swing.ImageIcon;
+
 /**
  *
  * @author verta
  */
 public class Window extends javax.swing.JFrame {
-    
+
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(Window.class.getName());
 
     /**
@@ -17,6 +19,7 @@ public class Window extends javax.swing.JFrame {
      */
     public Window() {
         initComponents();
+        
     }
 
     /**
@@ -81,6 +84,7 @@ public class Window extends javax.swing.JFrame {
 
         jTextField2.setText("jTextField2");
 
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/win.png"))); // NOI18N
         jButton1.setText("Verificar");
         jButton1.addActionListener(this::jButton1ActionPerformed);
 
@@ -148,9 +152,11 @@ public class Window extends javax.swing.JFrame {
 
         jPanel3.setBackground(new java.awt.Color(214, 217, 223));
 
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/ver.png"))); // NOI18N
         jButton2.setText("Ver");
         jButton2.addActionListener(this::jButton2ActionPerformed);
 
+        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/ocultar.png"))); // NOI18N
         jButton3.setText("Ocultar");
         jButton3.addActionListener(this::jButton3ActionPerformed);
 
@@ -251,6 +257,8 @@ public class Window extends javax.swing.JFrame {
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(() -> new Window().setVisible(true));
+        
+
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
