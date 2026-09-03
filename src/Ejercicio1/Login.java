@@ -5,19 +5,20 @@
 package Ejercicio1;
 
 import javax.swing.ImageIcon;
+import javax.swing.JOptionPane;
 
 /**
  *
  * @author verta
  */
-public class Window extends javax.swing.JFrame {
+public class Login extends javax.swing.JFrame {
 
-    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(Window.class.getName());
+    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(Login.class.getName());
 
     /**
      * Creates new form Window
      */
-    public Window() {
+    public Login() {
         initComponents();
         
     }
@@ -82,6 +83,11 @@ public class Window extends javax.swing.JFrame {
 
         btnVerificar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/win.png"))); // NOI18N
         btnVerificar.setText("Verificar");
+        btnVerificar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnVerificarMouseClicked(evt);
+            }
+        });
         btnVerificar.addActionListener(this::btnVerificarActionPerformed);
 
         jblPassword.setText("Contraseña:");
@@ -234,6 +240,16 @@ public class Window extends javax.swing.JFrame {
         pswContraseña.setEchoChar('*');
     }//GEN-LAST:event_btnOcultarActionPerformed
 
+    private void btnVerificarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnVerificarMouseClicked
+        String mail = txtUsuario.getText();
+        String psword = pswContraseña.getText();
+        if (mail.equals("alumno@ulp.edu.ar") && psword.equals("12345678")) {
+            JOptionPane.showMessageDialog(null, "¡Bienvenido!");
+        }else{
+            JOptionPane.showMessageDialog(null, "¡Contraseña o mail incorrectos!");
+        }
+    }//GEN-LAST:event_btnVerificarMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -256,7 +272,7 @@ public class Window extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(() -> new Window().setVisible(true));
+        java.awt.EventQueue.invokeLater(() -> new Login().setVisible(true));
         
 
     }
