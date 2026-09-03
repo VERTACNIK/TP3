@@ -11,14 +11,14 @@ import javax.swing.JOptionPane;
  *
  * @author verta
  */
-public class Login extends javax.swing.JFrame {
+public class Credenciales extends javax.swing.JFrame {
 
-    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(Login.class.getName());
+    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(Credenciales.class.getName());
 
     /**
      * Creates new form Window
      */
-    public Login() {
+    public Credenciales() {
         initComponents();
         
     }
@@ -48,6 +48,7 @@ public class Login extends javax.swing.JFrame {
         btnOcultar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Credenciales");
         setResizable(false);
 
         jDesktopPane1.setBackground(new java.awt.Color(61, 98, 127));
@@ -272,7 +273,7 @@ public class Login extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(() -> new Login().setVisible(true));
+        java.awt.EventQueue.invokeLater(() -> new Credenciales().setVisible(true));
         
 
     }

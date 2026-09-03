@@ -46,6 +46,7 @@ public class Convertidor extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Convertidor");
         setResizable(false);
 
         jDesktopPane1.setBackground(new java.awt.Color(0, 153, 153));
