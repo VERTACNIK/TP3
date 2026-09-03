@@ -53,6 +53,7 @@ public class Convertidor extends javax.swing.JFrame {
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Conversor de temperaturas", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 12))); // NOI18N
         jPanel2.setToolTipText("");
 
+        btnConvertir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/r1.png"))); // NOI18N
         btnConvertir.setText("Convertir");
         btnConvertir.addActionListener(this::btnConvertirActionPerformed);
 
